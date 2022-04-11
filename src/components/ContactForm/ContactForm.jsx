@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { Phonebook, LabelName, InputContact, AddContact } from './ContactForm.styled';
+
 export class ContactForm extends Component {
     state = {
       name: '',
@@ -57,4 +59,8 @@ export class ContactForm extends Component {
     );
   }
 
+}
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 }
